@@ -1,0 +1,27 @@
+.main-contents
+  .main-header
+    .main-box
+      .main-group
+        %h1 test-group
+        %h2 member
+      .main-edit
+        %p Edit
+        =link_to "#" do
+  .main-body
+    .main-userbox
+      .main-user
+        test-user
+      .main-time
+        2019/11/21(thr) 00:00:00
+    .main-message
+      こんにちは
+  .main-bottom
+    .main-message
+      %input.main-message__textbox(type="text" name= "message" placeholder="type a message" )
+      %label.main-message__icon
+        =icon('far','image')
+        .main-message__icon__file
+          %input(type="file") 
+      %input.main-message__submit(type="submit" name="submit" value="Send")
+        %a(href="#")
+      

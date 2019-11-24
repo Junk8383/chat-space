@@ -1,0 +1,17 @@
+.side-contents  
+  .side-header
+    .side-box
+      .side-box__name
+        %p name
+      %ul.side-box__item
+        %li
+        =link_to "#" do
+          = icon('fa','edit',class: "side-box__item--create")
+        %li
+        =link_to "#" do
+          = icon('fa','cog',class: "side-box__item--edit")
+  .side-body
+    .side-body__groups
+      %h1 test-user
+      %h2 hello world.
+    
