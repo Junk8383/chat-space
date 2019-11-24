@@ -1,0 +1,102 @@
+/*全体*/
+.main-contents {
+  width:calc(100vw - 300px);
+  
+} 
+
+/*ヘッダー*/
+.main-header {
+  height: 100px;
+  padding: 0 40px;
+  border-bottom: solid 1px #eee;
+}
+.main-box {
+  display: flex;
+  justify-content: space-between;
+}
+.main-group h1 {
+  padding-top: 35px;
+  font-size: 20px;
+  color: #333333;
+}
+.main-group h2 {
+  font-size: 12px;
+  color: #999999;
+  padding-top: 15px;
+}
+.main-edit {
+  $Blue: #38aef0;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 30px;
+  border: solid 1px $Blue;
+  color: $Blue;
+}
+
+
+/*投稿内容*/
+.main-body {
+  background-color: #fafafa;
+  padding: 46px 40px;
+  height: calc(100vh - 283px);
+}
+.main-userbox {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+.main-user {
+  font-size: 16px;
+  color: #434A54;
+  font-weight: bold;
+}
+.main-time {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+}
+.main-message {
+  font-size: 14px;
+  color: #434a54;
+  margin-top: 10px;
+}
+
+
+/*投稿フォーム*/
+.main-bottom {
+  padding: 20px 40px;
+  background-color: #ddd;
+}
+.main-message {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  position: relative;
+  &__textbox {
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    color: #434a54;
+    border-style: none;
+  }  
+  &__icon {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    &__file {
+      display: none;
+    }
+  } 
+  &__submit {
+    $Blue: #38aef0;
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: $Blue;
+    color: white;
+  }
+} 
+
