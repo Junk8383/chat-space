@@ -10,8 +10,11 @@
         %li
         =link_to edit_user_path(current_user) do
           = icon('fa','cog',class: "side-box__item--edit")
-  .side-body
-    .side-body__groups
-      %h3 test-user
-      %h4 hello world.
+  .groups
+    .group
+    =link_to "#" %do
+      .group__name
+      test-user
+      .group__message      
+      hello world.
     
