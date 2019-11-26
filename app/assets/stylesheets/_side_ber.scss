@@ -38,22 +38,22 @@
  
 /*グループのリスト*/
 }
-.side-body {
+.groups {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
   color: #ffffff;
   position: relative;
-  &__groups{
-    padding: 0 20px;
-  }
-  &__groups h3 {
-    font-size: 15px;
-    font-weight: bold;
-    padding:20px 0 5px;
-  }  
-  &__groups h4 {
-    font-size: 11px;
-    font-weight: bold;
-    padding-bottom: 20px;
-  }
 }
+  .group {
+    padding: 0 20px;
+    &__name {
+      font-size: 15px;
+      font-weight: bold;
+      padding:20px 0 5px;
+    }  
+    &__message {
+      font-size: 11px;
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+  }
