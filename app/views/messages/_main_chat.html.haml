@@ -17,10 +17,9 @@
       こんにちは
   .main-bottom
     .main-message
-      %input.main-message__textbox(type="text" name= "message" placeholder="type a message" )
-      %label.main-message__icon
+      = form_for [@group,@message] do |f|
+        = f.text_field :content, class: 'main-message__textbox', placeholder: 'type a message'
+      = f.label :image, class: 'main-message__icon'
         =icon('far','image')
-        .main-message__icon__file
-          %input(type="file") 
-      %input.main-message__submit(type="submit" name="submit" value="Send")
-        =link_to "#" 
+        =f.file_field :image, class:'main-message__icon__file'
+      = f.submit 'Send', class:'main-message__submit'
