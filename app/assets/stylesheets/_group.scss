@@ -1,28 +1,50 @@
-h1 {
+.chat-group-form h1 {
   letter-spacing: 2px;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
-h2 {
+.chat-group-form h2 {
   margin-bottom: 10px;
   color: #f05050;
   font-size: 14px;
 }
 
-ul {
+.chat-group-form ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-li {
+.chat-group-form li {
   margin: 0;
   padding: 0;
   font-size: 13px;
 }
 
+.chat-group-user h1 {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.chat-group-user h2 {
+  margin-bottom: 10px;
+  color: #f05050;
+  font-size: 14px;
+}
 
+.chat-group-user ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chat-group-user li {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
 
 .chat-group-form {
   width: 980px;
