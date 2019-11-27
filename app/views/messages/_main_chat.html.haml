@@ -8,13 +8,7 @@
         %p Edit
         =link_to "#" 
   .main-body
-    .main-userbox
-      .main-user
-        test-user
-      .main-time
-        2019/11/21(thr) 00:00:00
-    .main-message
-      こんにちは
+    = render @messages
   .main-bottom
     .main-message
       = form_for [@group,@message] do |f|
