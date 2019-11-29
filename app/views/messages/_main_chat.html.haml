@@ -10,7 +10,7 @@
           - @group.group_users.each do |group_user|
             = group_user.user.name
       .main-edit
-        Edit
+        =link_to 'Edit',"/groups/#{@group.id}/edit",method: :get,class: "main-edit__font"
   .main-body
     = render partial: "message", collection: @messages
   .main-bottom
