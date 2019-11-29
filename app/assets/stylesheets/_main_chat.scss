@@ -14,15 +14,18 @@
   display: flex;
   justify-content: space-between;
 }
-.main-group h5 {
+.main-group  {
   padding-top: 35px;
-  font-size: 20px;
-  color: #333333;
-}
-.main-group h6{
-  font-size: 12px;
-  color: #999999;
-  padding-top: 15px;
+  &__name {
+    font-size: 20px;
+    color: #333333;
+  }
+  &__member {
+    font-size: 12px;
+    color: #999999;
+    padding-top: 15px;
+    display: flex;
+  }
 }
 .main-edit {
   $Blue: #38aef0;
@@ -38,8 +41,11 @@
 /*投稿内容*/
 .main-body {
   background-color: #fafafa;
-  padding: 46px 40px;
-  height: calc(100vh - 283px);
+  padding:46px 40px 34px 40px;
+  height: calc(100vh - 271px);
+}
+.main-messagebox {
+  margin-bottom: 40px;
 }
 .main-userbox {
   display: flex;
@@ -70,26 +76,23 @@
 }
 .main-message {
   margin-top: auto;
-  width: 100%;
   display: flex;
   position: relative;
   &__textbox {
     height: 50px;
     width: 100%;
     padding: 0 40px 0 10px;
-    color: #434a54;
     border-style: none;
   }  
-  &__icon {
-    font-size: 1.3rem;
-    position: absolute;
-    top: 10px;
-    right: 120px;
-    padding-right: 10px;
-    &__file {
-      display: none;
-    }
-  } 
+  &__mask {
+    &__image {
+      font-size: 1.3rem;
+      position: absolute;
+      top: 10px;
+      right: 120px;
+      padding-right: 10px;
+    } 
+  }
   &__submit {
     $Blue: #38aef0;
     width: 100px;
@@ -101,3 +104,12 @@
   }
 } 
 
+/*フッター内の指定*/
+#new_message.new_message {
+  display: flex;
+  width: 100vw;
+}
+
+.hidden {
+  display: none;
+}
