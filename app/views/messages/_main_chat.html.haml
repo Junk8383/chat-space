@@ -2,18 +2,23 @@
   .main-header
     .main-box
       .main-group
-        %h5 test-group
-        %h6 member
+        .main-group__name
+        = @group.name
+        %ul.main-group__member 
+          Member:
+          %li.main-group__member--list
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
       .main-edit
-        %p Edit
-        =link_to "#" 
+        Edit
   .main-body
-    = render @messages
+    = render partial: "message", collection: @messages
   .main-bottom
-    .main-message
+    .main-message 
       = form_for [@group,@message] do |f|
         = f.text_field :content, class: 'main-message__textbox', placeholder: 'type a message'
-      = f.label :image, class: 'main-message__icon'
-        =icon('far','image')
-        =f.file_field :image, class:'main-message__icon__file'
-      = f.submit 'Send', class:'main-message__submit'
+        .main-message__mask
+          = f.label :image, class: 'main-message__mask__image' do
+            = icon('fas', 'image')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'main-message__submit'
