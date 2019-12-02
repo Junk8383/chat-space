@@ -5,8 +5,6 @@
     .main-time
       = message.created_at.strftime("%Y/%m/%d %H:%M")
   .main-message
-    /*元々main-messageクラスだけだったが以下のクラスを追加*/
-    /*なのであとでそれに合うよう変更*/
     - if message.content.present?
       .main-message__content
         = message.content
