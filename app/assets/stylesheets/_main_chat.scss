@@ -35,6 +35,10 @@
   margin-top: 30px;
   border: solid 1px $Blue;
   color: $Blue;
+  &__font {
+    color: $Blue;
+    text-decoration: none;
+  }
 }
 
 
@@ -112,4 +116,5 @@
 
 .hidden {
   display: none;
+  text-decoration: none;
 }

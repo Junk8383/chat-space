@@ -1,11 +1,11 @@
 .side-contents  
   .side-header
     .side-box
-      %h3.side-box__name
+      %p.side-box__name
         = current_user.name
       %ul.side-box__item
         %li
-        =link_to new_group_path do
+        = link_to new_group_path do
           = icon('fa','edit',class: "side-box__item--create")
         %li
         =link_to edit_user_path(current_user) do
