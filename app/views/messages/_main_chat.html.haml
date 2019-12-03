@@ -14,11 +14,11 @@
   .main-body
     = render partial: "message", collection: @messages
   .main-bottom
-    .main-message 
-      = form_for [@group,@message] do |f|
-        = f.text_field :content, class: 'main-message__textbox', placeholder: 'type a message'
-        .main-message__mask
-          = f.label :image, class: 'main-message__mask__image' do
+    .main-form
+      = form_for ([@group,@message] ) do |f|
+        = f.text_field :content, class: 'main-form__textbox', placeholder: 'type a message'
+        .main-form__mask
+          = f.label :image, class: 'main-form__mask__image' do
             = icon('fas', 'image')
             = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'main-message__submit'
+        = f.submit 'Send',id:'submit', class: 'main-form__btn'
