@@ -1,39 +1,26 @@
 $(function(){
   function buildHTML(message){
-    if (message.image) {
-      var html = `<div class="main-messagebox">
-                    <div class="main-userbox">
-                      <div class="main-user">
-                        ${message.user_name}
-                      </div>
-                      <div class="main-time">
-                        ${message.created_at}
-                      </div>
+    var img = (message.image) ?
+              ` <div class="main-message__image"> 
+                  <img src="${message.image.url}" alt=''>
+                </div>`:
+                ``  ;
+    var html = `<div class="main-messagebox">
+                  <div class="main-userbox">
+                    <div class="main-user">
+                      ${message.user_name}
                     </div>
-                    <div class="main-message">
-                      <div class="main-message__content">
-                        ${message.content}
-                      </div>
-                      <div class="main-message__image">
-                        <img src="${message.image.url}" alt=''>
-                      </div>
+                    <div class="main-time">
+                      ${message.created_at}
                     </div>
-                  </div>`
-    } else {
-      var html = `<div class="main-messagebox">
-                    <div class="main-userbox">
-                      <div class="main-user">
-                        ${message.user_name}
-                      </div>
-                      <div class="main-time">
-                        ${message.created_at}
-                      </div>
-                    </div>
-                    <div class="main-message">
+                  </div>
+                  <div class="main-message">
+                    <div class="main-message__content">
                       ${message.content}
+                      ${img}
                     </div>
-                  </div>`
-    }
+                  </div>
+                </div>`
     return html
   }
   $("#new_message").on("submit", function(e){
