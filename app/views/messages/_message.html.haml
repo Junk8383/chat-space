@@ -1,4 +1,4 @@
-.main-messagebox{"data-message-id": "#{message.id}"}
+.main-messagebox{"data-message_id": "#{message.id}"}
   .main-userbox
     .main-user
       = message.user.name
@@ -9,3 +9,5 @@
       .main-message__content
         = message.content
       = image_tag message.image.url, class: 'main-message__image' if message.image.present?
+
+      
