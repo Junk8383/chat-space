@@ -1,11 +1,13 @@
-.main-messagebox{"data-message-id": "#{message.id}"}
+.main-messagebox{"data-message_id": "#{message.id}"}
   .main-userbox
     .main-user
       = message.user.name
     .main-time
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .main-message
     - if message.content.present?
       .main-message__content
         = message.content
       = image_tag message.image.url, class: 'main-message__image' if message.image.present?
+
+      

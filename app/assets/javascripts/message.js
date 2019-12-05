@@ -49,20 +49,20 @@ $(function(){
   })
   var reloadMessages = function () {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      var last_message_id = $('.message:last').data("message-id"); 
+      var last_message_id = $('.main-messagebox:last').data("message_id"); 
 
       $.ajax({ 
         url: "api/messages", 
         type: 'get', 
         dataType: 'json', 
-        data: {last_id: last_message_id} 
+        data: {id: last_message_id} 
       })
       .done(function (messages) { 
         var insertHTML = '';
-        messages.forEach(function (message) {
-          insertHTML = buildHTML(message); 
-          $('.main-body').append(insertHTML);
-        })
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.main-body').append(insertHTML);
         $('.main-body').animate({scrollTop: $('.main-body')[0].scrollHeight}, 'fast');
       })
       .fail(function () {

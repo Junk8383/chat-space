@@ -49,6 +49,9 @@
   height: calc(100vh - 271px);
   overflow: scroll;
 }
+.main-body::-webkit-scrollbar {
+  display: none;
+}
 .main-messagebox {
   margin-bottom: 40px;
 }
@@ -131,4 +134,8 @@
 
 #text {
   display: none;
+}
+
+a {
+  text-decoration: none;
 }
